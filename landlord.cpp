@@ -83,6 +83,10 @@ void tenantList::display()
     }
 }
 
+void tenantInputScreen::getTenant()
+{
+}
+
 void userInterface::interact()
 {
 }
