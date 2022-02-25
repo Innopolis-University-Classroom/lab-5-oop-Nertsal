@@ -78,7 +78,7 @@ void tenantList::display()
     int i = 1;
     for (auto item : setPtrsTens)
     {
-        std::cout << i << ") " << item << std::endl;
+        std::cout << "  " << i << ") " << item << std::endl;
         ++i;
     }
 }
