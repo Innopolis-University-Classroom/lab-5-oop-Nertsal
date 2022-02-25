@@ -62,10 +62,30 @@ tenantList::~tenantList()
 
 int tenantList::getAptNo(string name)
 {
-    return -1; // TODO
+    auto item = tenant(name, 0);
+    return (*setPtrsTens.find(&item))->getAptNumber();
 }
 
-void userInterface::interact() {}
+void tenantList::insertTenant(tenant *item)
+{
+    setPtrsTens.insert(item);
+}
+
+void tenantList::display()
+{
+    using std::cout;
+    std::cout << "Tenant list:\n";
+    int i = 1;
+    for (auto item : setPtrsTens)
+    {
+        std::cout << i << ") " << item << std::endl;
+        ++i;
+    }
+}
+
+void userInterface::interact()
+{
+}
 
 userInterface::userInterface() {}
 
